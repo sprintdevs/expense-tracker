@@ -1,0 +1,9 @@
+{
+  "name": "expense-tracker",
+  "version": "1.0.0",
+  "description": "A simple tool to track your expenses.",
+  "main": "index.js",
+  "repository": "git@github.com:sprintdevs/expense-tracker.git",
+  "author": "Mehedi Hasan Tushar <mehedi.tushar@outlook.com>",
+  "license": "MIT"
+}
