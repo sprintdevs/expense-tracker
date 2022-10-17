@@ -1,8 +1,12 @@
-import express from 'express';
-import mongoose from 'mongoose';
+import express, { Request, Response } from 'express'
 
-const app = express();
+import { PORT } from './libraries/config'
+import { serverPrettyUrl } from './libraries/helpers'
 
-app.listen(5050, () => {
-    console.log("Server Running");
+const app = express()
+
+app.get('/', (req: Request, res: Response) => {
+    return res.status(200).json({ message: 'Aloha!' })
 })
+
+app.listen(PORT, () => console.log(serverPrettyUrl(PORT)))
