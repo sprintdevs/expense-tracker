@@ -1,18 +1,15 @@
 {
-  "name": "expense-tracker",
-  "version": "1.0.0",
-  "description": "A simple tool to track your expenses.",
-  "main": "index.js",
-  "repository": "git@github.com:sprintdevs/expense-tracker.git",
-  "author": "Mehedi Hasan Tushar <mehedi.tushar@outlook.com>",
-  "license": "MIT",
-  "scripts": {
-    "setup": "yarn --cwd ./server && yarn --cwd ./client",
-    "start": "concurrently \"yarn start-server\" \"yarn start-client\"",
-    "start-server": "yarn --cwd ./server server",
-    "start-client": "yarn --cwd ./client dev"
-  },
-  "dependencies": {
-    "concurrently": "^7.4.0"
-  }
+    "name": "expense-tracker",
+    "description": "A simple tool to track your expenses.",
+    "private": true,
+    "version": "1.0.0",
+    "scripts": {
+        "install": "yarn --cwd ./server && yarn --cwd ./client",
+        "start": "concurrently -i \"yarn start-server\" \"yarn start-client\"",
+        "start-server": "yarn --cwd ./server server",
+        "start-client": "yarn --cwd ./client dev"
+    },
+    "dependencies": {
+        "concurrently": "^7.4.0"
+    }
 }
